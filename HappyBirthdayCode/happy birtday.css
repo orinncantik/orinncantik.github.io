@@ -1,0 +1,84 @@
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+p {
+  margin: 0 0;
+  position: absolute;
+  font: 16px Verdana;
+  color: #eee;
+  height: 25px;
+  top: calc(100vh - 30px);
+  text-shadow: 0 0 2px white;
+}
+p a {
+  text-decoration: none;
+  color: #aaa;
+}
+span {
+  font-size: 11px;
+}
+p > a:first-of-type {
+  font-size: 20px;
+}
+body {
+  overflow: hidden;
+}
+
+/* Tombol Selanjutnya */
+.btn-next {
+  background: linear-gradient(135deg, #ff7a00, #ff0066); /* Gradasi warna menarik */
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease; /* Transisi smooth untuk hover */
+  cursor: pointer;
+}
+
+.btn-next:hover {
+  background: linear-gradient(135deg, #ff0066, #ff7a00); /* Warna gradasi terbalik saat hover */
+  transform: scale(1.1); /* Efek zoom in saat hover */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+}
+
+.btn-next svg {
+  margin-right: 8px; /* Spasi antara icon dan teks */
+}
+
+.text {
+  font-size: 16px;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Animasi dan efek glow untuk tombol */
+.btn-next:active {
+  animation: glow 1s ease-out infinite; /* Efek glow saat tombol ditekan */
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.9);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+  }
+}
+
+/* Tombol Selanjutnya Fixed */
+.btn-next-container {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
